@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'account',
     'home',
+    'django_rest_passwordreset',
 ]
 
 MIDDLEWARE = [
