@@ -51,3 +51,10 @@ class LoginSerializer(serializers.Serializer):
       refresh = RefreshToken.for_user(user)
 
       return {'message': 'login sucessfully', 'data': {'token': {'refresh': str(refresh), 'access': str(refresh.access_token)}}}
+
+
+class ChangePasswordSerializer(serializers.Serializer):
+    model = User
+
+    old_password = serializers.CharField(required=True)
+    new_password = serializers.CharField(required=True)
